@@ -45,6 +45,10 @@ public class Neo4JCsvImporter {
     private void runQueries(){
         Session session = driver.session();
 
+        session.run("MATCH ()-[rel]->() DELETE rel");
+
+        session.run("MATCH (n) DELETE n");
+
         session.run("LOAD CSV WITH HEADERS FROM \"file:///student.csv\" AS student\n" +
                 "CREATE (s:Student)\n" +
                 "SET s = student");
