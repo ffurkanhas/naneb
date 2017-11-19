@@ -23,7 +23,7 @@ public class DbInitializer {
   private HashMap<String, ArrayList<String>> followingStudents;
   private String url = "jdbc:postgresql://localhost:5432/naneb";
   private String userName = "postgres";
-  private String password = "123456";
+  private String password = "postgres";
 
   public DbInitializer(){
 
