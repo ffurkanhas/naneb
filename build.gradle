@@ -1,0 +1,33 @@
+group 'com.etubis.project'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "org.jsoup:jsoup:1.10.3"
+
+    // jdbc for postgresql
+    compile 'org.postgresql:postgresql:9.3-1101-jdbc41'
+    //neo4j
+    compile 'org.neo4j.driver:neo4j-java-driver:1.2.1'
+    //zt-exec for ProcessExecutor
+    compile 'org.zeroturnaround:zt-exec:1.10'
+}
+
+task nanebJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Naneb',
+                'Implementation-Version': version,
+                'Main-Class': 'Neo4J/PsqlToNeo4JRunner'
+    }
+    baseName = 'naneB' + '-linux'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
