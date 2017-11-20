@@ -38,6 +38,7 @@ public class ServerApp {
             sa.createDatabase(sa.postgresUserName,sa.postgresPassword);
         }
         System.out.print("Do you want to install Neo4J? (yes/no)");
+        answer = kyb.nextLine();
         if(answer.charAt(0) == 'y'){
             sa.installNeo4J();
         }
