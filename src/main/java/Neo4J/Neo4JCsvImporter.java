@@ -36,38 +36,37 @@ public class Neo4JCsvImporter {
         }
     }
 
-    public void connectNeo4JRunQueries(){
+    public void connectNeo4J(){
         driver = GraphDatabase.driver( neo4JUrl, AuthTokens.basic( neo4JUserName, neo4JPassword ) );
-        runQueries();
-        driver.close();
     }
 
-    private void runQueries(){
+    public void runQueries(){
         Session session = driver.session();
 
+        //Delete all relations
         session.run("MATCH ()-[rel]->() DELETE rel");
-
+        //Delete all nodes
         session.run("MATCH (n) DELETE n");
-
+        //Import students
         session.run("LOAD CSV WITH HEADERS FROM \"file:///student.csv\" AS student\n" +
                 "CREATE (s:Student)\n" +
                 "SET s = student");
-
+        //Import courses
         session.run("LOAD CSV WITH HEADERS FROM \"file:///course.csv\" AS course\n" +
                 "CREATE (n:Course)\n" +
                 "SET n = course");
-
+        //Create relations between students and courses
         session.run("LOAD CSV WITH HEADERS FROM \"file:///takes.csv\" AS csvTakes\n" +
                 "MATCH (s:Student),(course:Course)\n" +
                 "WHERE s.student_id = csvTakes.fk_student_id and course.code = csvTakes.fk_course_code\n" +
                 "MERGE (courseSection:CourseSection {course_code: csvTakes.fk_course_code, section: csvTakes.section})\n" +
                 "MERGE (s)-[:takesSection]->(courseSection)\n" +
                 "MERGE (s)-[:takesCourse]->(course)");
-
+        //Import classrooms
         session.run("LOAD CSV WITH HEADERS FROM \"file:///classroom.csv\" AS csvClass\n" +
                 "CREATE (n:Classroom)\n" +
                 "SET n = csvClass");
-
+        //Create relations between courses and classrooms
         session.run("LOAD CSV WITH HEADERS FROM \"file:///held_in.csv\" AS csvHeldIn\n" +
                 "MATCH (c:Course)\n" +
                 "WHERE c.code = csvHeldIn.fk_course_code\n" +
@@ -76,25 +75,52 @@ public class Neo4JCsvImporter {
                 "CREATE (courseP:CourseProgram)\n" +
                 "SET courseP = csvHeldIn\n" +
                 "CREATE (c)-[:held_in {start_at: csvHeldIn.start_at, end_at:csvHeldIn.end_at, dayofweek: csvHeldIn.dayofweek, section: csvHeldIn.section}]->(classes)");
-
+        //Import academic staffs
         session.run("LOAD CSV WITH HEADERS FROM \"file:///academic_staff.csv\" AS csvAcademicStaff\n" +
                 "CREATE (as:AcademicStaff)\n" +
                 "SET as = csvAcademicStaff");
-
+        //Create relations between academic staffs and courses
         session.run("LOAD CSV WITH HEADERS FROM \"file:///offers.csv\" AS csvOffers\n" +
                 "MATCH (as:AcademicStaff),(c:Course)\n" +
                 "WHERE as.as_id = csvOffers.fk_staff_id and c.code = csvOffers.fk_course_code\n" +
                 "MERGE (as)-[:offers]->(c)");
-
+        //Import student clubs
         session.run("LOAD CSV WITH HEADERS FROM \"file:///student_club.csv\" AS csvStudentClub\n" +
                 "CREATE (n:StudentClub)\n" +
                 "SET n = csvStudentClub");
-
+        //Create relations between students and student clubs
         session.run("LOAD CSV WITH HEADERS FROM \"file:///follows.csv\" AS csvFollows\n" +
                 "MATCH (s:Student),(sc:StudentClub)\n" +
                 "WHERE s.student_id = csvFollows.fk_student_id and sc.club_name = csvFollows.fk_club_name\n" +
                 "MERGE (s)-[:follows]->(sc)");
 
+        session.run("MATCH (benan:Student),(furkan:Student), (benan)-[:takesCourse]->(d:Course)<-[:takesCourse]-(furkan)\n" +
+                "MERGE (benan)-[r:DersIliskisi]-(furkan)\n" +
+                "WITH Count(d) as co,r as rel\n" +
+                "SET rel.len = round(10.0^2 * 0.6 * co)/10.0^2");
+
+        session.run("MATCH (benan:Student),(furkan:Student), (benan)-[:takesSection]->(d:CourseSection)<-[:takesSection]-(furkan)\n" +
+                "MERGE (benan)-[r:SectionIliskisi]-(furkan)\n" +
+                "WITH Count(d) as co,r as rel\n" +
+                "SET rel.len = round(10.0^2 * 0.8 * co)/10.0^2");
+
+        session.run("MATCH (benan:Student),(furkan:Student), (benan)-[:follows]->(d:StudentClub)<-[:follows]-(furkan)\n" +
+                "MERGE (benan)-[r:KulupIliskisi]-(furkan)\n" +
+                "WITH Count(d) as co,r as rel\n" +
+                "SET rel.len = round(10.0^2 * 0.5 * co)/10.0^2");
+
+        session.run("MATCH (benan:Student),(furkan:Student)\n" +
+                "WHERE benan.dept = furkan.dept\n" +
+                "MERGE (benan)-[r:BolumIliskisi]-(furkan)\n" +
+                "WITH r as rel\n" +
+                "SET rel.len = round(10.0^2 * 0.6 * 1)/10.0^2");
+
         session.close();
+        driver.close();
+    }
+
+    public void setSettings(String neo4JUserName,String neo4JPassword){
+        this.neo4JUserName = neo4JUserName;
+        this.neo4JPassword = neo4JPassword;
     }
 }

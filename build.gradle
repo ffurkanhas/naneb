@@ -19,13 +19,15 @@ dependencies {
     compile 'org.neo4j.driver:neo4j-java-driver:1.2.1'
     //zt-exec for ProcessExecutor
     compile 'org.zeroturnaround:zt-exec:1.10'
+    // https://mvnrepository.com/artifact/jgoodies/forms
+    compile group: 'jgoodies', name: 'forms', version: '1.0.5'
 }
 
 task nanebJar(type: Jar) {
     manifest {
         attributes 'Implementation-Title': 'Naneb',
                 'Implementation-Version': version,
-                'Main-Class': 'Neo4J/PsqlToNeo4JRunner'
+                'Main-Class': 'ServerApp/ServerApp'
     }
     baseName = 'naneB' + '-linux'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }

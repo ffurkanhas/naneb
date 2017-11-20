@@ -10,9 +10,12 @@ public class PsqlToNeo4JHelper {
     private Statement stmt;
     private Connection c;
     private ArrayList<String> tableNames;
+    private String neo4JUserName = "neo4j";
+    private String neo4JPassword = "123456";
 
     public void run(){
         Neo4JCsvImporter neo4JCsvImporter = new Neo4JCsvImporter();
+        neo4JCsvImporter.setSettings(neo4JUserName,neo4JPassword);
         DbInitializer naneb = new DbInitializer();
         c = naneb.getConnect();
         try{
@@ -22,7 +25,8 @@ public class PsqlToNeo4JHelper {
         }
         createCsv();
         neo4JCsvImporter.copyCsvToNeo4J(tableNames);
-        neo4JCsvImporter.connectNeo4JRunQueries();
+        neo4JCsvImporter.connectNeo4J();
+        neo4JCsvImporter.runQueries();
     }
 
     private void createCsv(){
@@ -53,5 +57,10 @@ public class PsqlToNeo4JHelper {
             System.out.println(e.getMessage());
         }
         return tableNames;
+    }
+
+    public void setSettings(String neo4JUserName,String neo4JPassword){
+        this.neo4JUserName = neo4JUserName;
+        this.neo4JPassword = neo4JPassword;
     }
 }

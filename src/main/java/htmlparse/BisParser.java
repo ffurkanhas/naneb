@@ -43,7 +43,7 @@ public class BisParser {
    *          source(0=file, 1=www-URL) and uri seperated by a space.
    * @throws IOException
    */
-  public void bisParserRunner(String[] args) throws IOException {
+  public void bisParserRunner(String[] args,String userName, String password) throws IOException {
     if (args.length != 2)
     {
       System.out.println("Wrong args size!");
@@ -147,6 +147,7 @@ public class BisParser {
     }
     sc.close();
     DbInitializer dbinit = new DbInitializer(students, takes, courseClass, allCourses, offers, fc, fs);
+    dbinit.setSettings(userName,password);
     dbinit.initialize();
   }
 

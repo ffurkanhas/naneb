@@ -42,6 +42,11 @@ public class DbInitializer {
     this.followingStudents = followingStudents;
   }
 
+  public void setSettings(String userName, String password){
+    this.userName = userName;
+    this.password = password;
+  }
+
   public void initialize()
   {
     c = connect(url,userName,password);
