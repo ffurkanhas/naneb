@@ -96,7 +96,7 @@ public class ServerApp {
         try {
             String neo4JStart = pe.command("sudo","service","neo4j","start").readOutput(true).execute().outputUTF8();
             System.out.println("Waiting for neo4J");
-            TimeUnit.MINUTES.sleep(1);
+            TimeUnit.MINUTES.sleep(5);
             System.out.println(neo4JStart);
         } catch (IOException | InterruptedException | TimeoutException e) {
             e.printStackTrace();

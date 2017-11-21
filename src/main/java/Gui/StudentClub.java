@@ -1,11 +1,9 @@
 package Gui;
 
-import java.util.Set;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name = "student_club")
+@Table(name = "Student_Club")
 public class StudentClub {
 	@Id
 	@Column(name = "club_name", unique = true)

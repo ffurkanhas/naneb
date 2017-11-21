@@ -83,8 +83,8 @@ public class DbInitializer {
       for(String no : followingStudents.get(s))
       {
         String squery = "INSERT INTO follows VALUES(" +
-            Integer.parseInt(no) + "," +
-            "'" + s + "'" +
+            "'" + s + "'," +
+            + Integer.parseInt(no) +
             ");"
             ;
         System.out.println(squery); /* Debug Print */
