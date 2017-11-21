@@ -96,7 +96,7 @@ public class ServerApp {
         try {
             String neo4JStart = pe.command("sudo","service","neo4j","start").readOutput(true).execute().outputUTF8();
             System.out.println("Waiting for neo4J");
-            TimeUnit.MINUTES.sleep(5);
+            TimeUnit.MINUTES.sleep(2);
             System.out.println(neo4JStart);
         } catch (IOException | InterruptedException | TimeoutException e) {
             e.printStackTrace();
@@ -115,10 +115,13 @@ public class ServerApp {
 
     public void createDatabase(String userName,String password){
         try {
+            Class.forName("org.postgresql.Driver");
             Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", userName, password);
             Statement statement = c.createStatement();
             statement.executeUpdate("CREATE DATABASE naneb");
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

@@ -11,7 +11,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.jsoup:jsoup:1.10.3" level="project" />
     <orderEntry type="library" name="Gradle: org.postgresql:postgresql:9.3-1101-jdbc41" level="project" />
-    <orderEntry type="library" name="Gradle: org.neo4j.driver:neo4j-java-driver:1.2.1" level="project" />
     <orderEntry type="library" name="Gradle: org.neo4j:neo4j-jdbc-driver:3.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.zeroturnaround:zt-exec:1.10" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" level="project" />

@@ -95,14 +95,14 @@ public class GUI {
 		ComboBoxModel<String> courses = new DefaultComboBoxModel<String>(course_str);
 		ComboBoxModel<String> staff = new DefaultComboBoxModel<String>(aStaff_str);
 		ComboBoxModel<String> depts = new DefaultComboBoxModel<String>(dept_str);
-		preqdCourses.put("B?L113", new String[] {"B?L211"});
-		preqdCourses.put("B?L361", new String[] {"B?L461"});
-		preqdCourses.put("B?L214", new String[] {"B?L461"});
+		preqdCourses.put("BİL113", new String[] {"BİL211"});
+		preqdCourses.put("BİL361", new String[] {"BİL461"});
+		preqdCourses.put("BİL214", new String[] {"BİL461"});
 		//preqdCourses.put("B?L214", "B?L395");
-		preqdCourses.put("B?L264", new String[] {"B?L461","B?L361"});
-		preqdCourses.put("B?L481", new String[] {"B?L495"});
-		preqdCourses.put("B?L212", new String[] {"B?L372","B?L331"});
-		preqdCourses.put("B?L133", new String[] {"B?L331"});
+		preqdCourses.put("BİL264", new String[] {"BİL461","BİL361"});
+		preqdCourses.put("BİL481", new String[] {"BİL495"});
+		preqdCourses.put("BİL212", new String[] {"BİL372","BİL331"});
+		preqdCourses.put("BİL133", new String[] {"BİL331"});
 		frame.getContentPane().setLayout(new MigLayout("", "[26px][31px,grow][26px][][][26px][27px][][26px][27px][248px,grow][51px][26px]", "[18px][3px][15px][6px][14px][3px][20px][17px][20px][6px][20px][23px][][][50px][][38px][][][][][][][][][][][][][][36px][][grow][3px][grow][23px][59px]"));
 		frame.pack();
 		JLabel label = new JLabel("");
@@ -274,7 +274,7 @@ public class GUI {
 
 		JLabel label_17 = new JLabel("");
 		frame.getContentPane().add(label_17, "cell 11 8,grow");
-		String[] pCourse = {"B?L361","B?L214","B?L264","B?L113","B?L481","B?L212","B?L133"};
+		String[] pCourse = {"BİL361","BİL214","BİL264","BİL113","BİL481","BİL212","BİL133"};
 		ComboBoxModel<String> preqCourse = new DefaultComboBoxModel<String>(pCourse);
 
 		JComboBox<String> comboBox = new JComboBox<String>();
@@ -425,7 +425,7 @@ public class GUI {
 				textArea.setText("Puan Numara GPA\n"
 						+ "_ _ _ _ _ _ _ _ _ _ _\n"+
 						"En iyi secenek:\n"+outs[0]+"\nDiger secenekler:\n"+outs[1]+"\n"+outs[2]+"\nThreshold Onerisi: " + (sum/(double)students.length));
-
+				n.closeDriver();
 
 			}
 		});
@@ -513,14 +513,5 @@ public class GUI {
 				+ studentClubSelected.toString() + "\nHocalar: " + staff + "\nBolum: "
 				+ deptsSelected.toString();
 		Selected.setText(select);
-		staff="";
 	}
-/*	private class SwingAction extends AbstractAction {
-		public SwingAction() {
-			//putValue(NAME, "SwingAction");
-			//putValue(SHORT_DESCRIPTION, "Some short description");
-		}
-		public void actionPerformed(ActionEvent e) {
-		}
-	}*/
 }

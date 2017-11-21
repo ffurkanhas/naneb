@@ -12,7 +12,7 @@ import java.util.concurrent.TimeoutException;
 
 public class Neo4JCsvImporter {
 
-    private String neo4JUrl = "bolt://localhost:7687";
+    private String neo4JUrl = "jdbc:neo4j:bolt://localhost";
     private String neo4JUserName = "neo4j";
     private String neo4JPassword = "123456";
     private String csvPaths = "/tmp/";
@@ -114,10 +114,6 @@ public class Neo4JCsvImporter {
                 "MERGE (benan)-[r:BolumIliskisi]-(furkan)\n" +
                 "WITH r as rel\n" +
                 "SET rel.len = round(10.0^2 * 1)/10.0^2");
-        session.run("LOAD CSV WITH HEADERS FROM \"file:///prerequisite.csv\" AS csvPre\n" +
-                "MATCH (c1:Course),(c2:Course)\n" +
-                "WHERE c1.code = csvPre.course_code and c2.code = csvPre.pre_code\n" +
-                "MERGE (c2)-[:preRequisite]->(c1)");
         session.close();
         driver.close();
     }

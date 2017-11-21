@@ -6,6 +6,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Random;
 
 import htmlparse.Util.StudentBundle;
 
@@ -206,13 +207,15 @@ public class DbInitializer {
     /* Insert all students */
     for(StudentBundle s : sb)
     {
+      Random r = new Random();
+      double randomValue = 1 + (5 - 1) * r.nextDouble();
       String[] nTokens = s.getNameSeperate();
       String squery = "INSERT INTO student VALUES(" +
                       "'" + nTokens[0] + "'," +
                       "'" + nTokens[1] + "'," +
                       "'" + nTokens[2] + "'," +
                       "'" + s.getDept()+ "',"  +
-                      s.getNo()        + ""  +
+                      s.getNo()        + ","  + randomValue +
                       ");"
                       ;
       System.out.println(squery); /*Debug Print*/
@@ -334,11 +337,6 @@ public class DbInitializer {
     stmt.execute(createOffers);
     String alterGpa = "ALTER TABLE student ADD COLUMN gpa float DEFAULT (3.5);";
     stmt.execute(alterGpa);
-    String createPre = "CREATE TABLE prerequisite(\n" +
-            "\tcode varchar(10),\n" +
-            "    pre_code varchar(10)\n" +
-            ");";
-    stmt.execute(createPre);
     stmt.close();
   }
 

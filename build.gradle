@@ -16,7 +16,7 @@ dependencies {
     // jdbc for postgresql
     compile 'org.postgresql:postgresql:9.3-1101-jdbc41'
     //neo4j
-    compile 'org.neo4j.driver:neo4j-java-driver:1.2.1'
+    //compile 'org.neo4j.driver:neo4j-java-driver:1.2.1'
     // https://mvnrepository.com/artifact/org.neo4j/neo4j-jdbc-driver
     compile group: 'org.neo4j', name: 'neo4j-jdbc-driver', version: '3.1.0'
     //zt-exec for ProcessExecutor
@@ -52,7 +52,7 @@ task nanebClientJar(type: Jar) {
                 'Implementation-Version': version,
                 'Main-Class': 'Gui/GUI'
     }
-    baseName = 'naneB'
+    baseName = 'naneB' + '-client'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }

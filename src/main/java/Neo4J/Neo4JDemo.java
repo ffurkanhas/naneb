@@ -7,21 +7,6 @@ public class Neo4JDemo {
     static String neo4JUserName = "neo4j";
     static String neo4JPassword = "123456";
     static Driver driver;
-    public static void main(String args[]){
-        driver = GraphDatabase.driver( neo4JUrl, AuthTokens.basic( neo4JUserName, neo4JPassword ) );
-        double sonuc = dersIliskisi("141101024","141101070");
-        double sonuc2 = sectionIliskisi("141101024","141101070");
-        double sonuc3 = kulupIliskisi("141101024","141101070");
-        double sonuc4 = bolumIliskisi("141101024","141101070");
-        System.out.println(sonuc);
-        System.out.println(sonuc2);
-        System.out.println(sonuc3);
-        System.out.println(sonuc4);
-        System.out.println("Toplam: " + toplamIliski("141101024","141101070"));
-        double ogrenci1Gpa = ogrenciGpa("141101024");
-        System.out.println(ogrenci1Gpa);
-        driver.close();
-    }
 
     public static double dersIliskisi(String ogrenciNo1, String ogrenciNo2){
         Session session = driver.session();
