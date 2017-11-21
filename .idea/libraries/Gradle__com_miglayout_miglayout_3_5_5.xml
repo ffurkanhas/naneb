@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.miglayout:miglayout:3.5.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.miglayout/miglayout/3.5.5/a5b2173dd25bd581cc711b1d7ee764bc631f2e55/miglayout-3.5.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.miglayout/miglayout/3.5.5/18f4121a9bcba3899c71a01939447c1544850702/miglayout-3.5.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
