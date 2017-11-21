@@ -10,14 +10,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 public class ServerApp {
     ProcessExecutor pe;
-    private String postgresUserName = "postgres";
-    private String postgresPassword = "postgres";
+    private static String postgresUserName = "postgres";
+    private static String postgresPassword = "postgres";
     private String neo4JUserName = "neo4j";
-    private String neo4JPassword = "123456";
+    private String neo4JPassword = "neo4j";
     public static void main(String args[]){
 
         ServerApp sa = new ServerApp();
@@ -48,8 +49,8 @@ public class ServerApp {
             System.out.print("Enter you Neo4J password: ");
             sa.neo4JPassword = kyb.nextLine();
         }
-        sa.changeHeapSize();
         sa.runBisParser();
+        sa.changeHeapSize();
         sa.runPsqlToNeo4J();
         sa.changeHeapSizeToDefault();
     }
@@ -94,7 +95,8 @@ public class ServerApp {
     public void startNeo4J(){
         try {
             String neo4JStart = pe.command("sudo","service","neo4j","start").readOutput(true).execute().outputUTF8();
-            Thread.sleep(1000);
+            System.out.println("Waiting for neo4J");
+            TimeUnit.MINUTES.sleep(1);
             System.out.println(neo4JStart);
         } catch (IOException | InterruptedException | TimeoutException e) {
             e.printStackTrace();
@@ -115,7 +117,6 @@ public class ServerApp {
         try {
             Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", userName, password);
             Statement statement = c.createStatement();
-            statement.executeUpdate("DROP DATABASE naneb");
             statement.executeUpdate("CREATE DATABASE naneb");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -125,9 +126,8 @@ public class ServerApp {
     public void changeHeapSize(){
         try {
             stopNeo4J();
-            String resultInitHeapSize = pe.command("sudo","sed","-i","-e","s/#dbms.memory.heap.initial_size=512m/dbms.memory.heap.initial_size=2048m/g","/etc/neo4j/neo4j.conf").readOutput(true).execute().outputUTF8();
-            String resultMaxHeapSize = pe.command("sudo","sed","-i","-e","s/#dbms.memory.heap.max_size=512m/dbms.memory.heap.max_size=2048m","/etc/neo4j/neo4j.conf").readOutput(true).execute().outputUTF8();
-            System.out.println(resultInitHeapSize + "\n" + resultMaxHeapSize);
+            String resultInitHeapSize = pe.command("sudo","sed","-i","-e","s/#dbms.memory.heap.initial_size=512m/dbms.memory.heap.initial_size=2048m/g","/etc/neo4j/neo4j.conf",">","/tmp/neo4j.conf").readOutput(true).execute().outputUTF8();
+            String resultMaxHeapSize = pe.command("sudo","sed","-i","-e","s/#dbms.memory.heap.max_size=512m/dbms.memory.heap.max_size=2048m/g","/etc/neo4j/neo4j.conf",">","/tmp/neo4j.conf").readOutput(true).execute().outputUTF8();
             startNeo4J();
         } catch (IOException | InterruptedException | TimeoutException e) {
             e.printStackTrace();
@@ -137,9 +137,8 @@ public class ServerApp {
     public void changeHeapSizeToDefault(){
         try {
             stopNeo4J();
-            String resultInitHeapSize = pe.command("sudo","sed","-i","-e","s/dbms.memory.heap.initial_size=2048m/#dbms.memory.heap.initial_size=2048m/g","/etc/neo4j/neo4j.conf").readOutput(true).execute().outputUTF8();
-            String resultMaxHeapSize = pe.command("sudo","sed","-i","-e","s/dbms.memory.heap.max_size=2048m/#dbms.memory.heap.max_size=2048m","/etc/neo4j/neo4j.conf").readOutput(true).execute().outputUTF8();
-            System.out.println(resultInitHeapSize + "\n" + resultMaxHeapSize);
+            String resultInitHeapSize = pe.command("sudo","sed","-i","-e","s/dbms.memory.heap.initial_size=2048m/#dbms.memory.heap.initial_size=2048m/g","/etc/neo4j/neo4j.conf",">","/tmp/neo4j.conf").readOutput(true).execute().outputUTF8();
+            String resultMaxHeapSize = pe.command("sudo","sed","-i","-e","s/dbms.memory.heap.max_size=2048m/#dbms.memory.heap.max_size=2048m","/etc/neo4j/neo4j.conf",">","/tmp/neo4j.conf").readOutput(true).execute().outputUTF8();
             startNeo4J();
         } catch (IOException | InterruptedException | TimeoutException e) {
             e.printStackTrace();
@@ -148,7 +147,7 @@ public class ServerApp {
 
     public void runBisParser(){
         BisParser bp = new BisParser();
-        String[] args = {"0","src/main/resources/bis.html"};
+        String[] args = {"0","/bis.html"};
         try {
             bp.bisParserRunner(args,postgresUserName,postgresPassword);
         } catch (IOException e) {
@@ -160,6 +159,7 @@ public class ServerApp {
         PsqlToNeo4JHelper converter = new PsqlToNeo4JHelper();
         Long timeBegin = System.currentTimeMillis();
         converter.setSettings(neo4JUserName,neo4JPassword);
+        converter.psqlSetSettings(postgresUserName,postgresPassword);
         converter.run();
         System.out.println("Exporting csv files and creating graph database took " + (System.currentTimeMillis() - timeBegin) / 1000 + " seconds.");
     }

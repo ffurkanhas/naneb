@@ -1,18 +1,10 @@
 package htmlparse;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.MalformedURLException;
+import java.io.*;
+import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Scanner;
+import java.sql.SQLException;
+import java.util.*;
 
 import htmlparse.Util.CourseBundle;
 import htmlparse.Util.StudentBundle;
@@ -52,9 +44,11 @@ public class BisParser {
     Document doc = null;
     if (args[0].equals("0"))
     {
+      InputStream in = getClass().getResourceAsStream(args[1]);
+
       File bisFile = new File(args[1]);
       try {
-        doc = Jsoup.parse(bisFile, null);
+        doc = Jsoup.parse(in, null,"");
       } catch (IOException e) {
         e.printStackTrace();
       }
@@ -148,6 +142,11 @@ public class BisParser {
     sc.close();
     DbInitializer dbinit = new DbInitializer(students, takes, courseClass, allCourses, offers, fc, fs);
     dbinit.setSettings(userName,password);
+    try {
+      dbinit.createTables();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
     dbinit.initialize();
   }
 
@@ -310,7 +309,6 @@ public class BisParser {
         String dept = cols.get(4).text();
         StudentBundle sb = new StudentBundle(id, name[0], name[1], name[2], dept);
         students.add(sb);
-        //printStudent(sb); /* Debug print */
       }
     }
     return students;

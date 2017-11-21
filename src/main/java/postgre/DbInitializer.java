@@ -249,19 +249,97 @@ public class DbInitializer {
    * PLEASE ENTER CORRECT CONNECTION INFO
    * @return c
    */
-  private Connection connect(String url, String userName, String password)
+  private Connection connect(String url, String user_Name, String pass_word)
   {
     Connection c = null;
     try
     {
       Class.forName("org.postgresql.Driver");
-      c = DriverManager.getConnection(url,userName,password);
+      c = DriverManager.getConnection(url,user_Name,pass_word);
      } catch (Exception e)
     {
       e.printStackTrace();
     }
     System.out.println("Opened database successfully");
     return c;
+  }
+
+  public void createTables() throws SQLException {
+    c = connect(url,userName,password);
+    stmt = c.createStatement();
+    String createStudents = "CREATE TABLE STUDENT(\n" +
+            "first_name varchar(16) NOT NULL,\n" +
+            "m_init varchar(16),\n" +
+            "last_name varchar(20) NOT NULL,\n" +
+            "dept varchar(48) NOT NULL,\n" +
+            "student_id integer PRIMARY KEY\n" +
+            ");";
+    stmt.execute(createStudents);
+    String createAcademicStaff = "CREATE TABLE ACADEMIC_STAFF(\n" +
+            "first_name varchar(16) NOT NULL,\n" +
+            "m_init varchar(16),\n" +
+            "last_name varchar(16) NOT NULL,\n" +
+            "dept varchar(48) NOT NULL,\n" +
+            "as_id integer PRIMARY KEY\n" +
+            ");";
+    stmt.execute(createAcademicStaff);
+    String createCourses = "CREATE TABLE COURSE(\n" +
+            "course_name varchar(32),\n" +
+            "code varchar(10) PRIMARY KEY\n" +
+            ");";
+    stmt.execute(createCourses);
+    String createClassrooms = "CREATE TABLE CLASSROOM(\n" +
+            "c_floor integer,\n" +
+            "building integer,\n" +
+            "class_id varchar(12) PRIMARY KEY\n" +
+            ");\n";
+    stmt.execute(createClassrooms);
+    String createStudentClub = "CREATE TABLE STUDENT_CLUB(\n" +
+            "club_name varchar(64) PRIMARY KEY,\n" +
+            "followers integer\n" +
+            ");";
+    stmt.execute(createStudentClub);
+    String createFollows = "CREATE TABLE FOLLOWS(\n" +
+            "fk_club_name varchar(64),\n" +
+            "fk_student_id integer,\n" +
+            "FOREIGN KEY (fk_student_id) References student(student_id),\n" +
+            "FOREIGN KEY (fk_club_name) References student_club(club_name)\n" +
+            ");";
+    stmt.execute(createFollows);
+    String createTakes = "CREATE TABLE TAKES(\n" +
+            "section integer NOT NULL,\n" +
+            "fk_student_id integer,\n" +
+            "fk_course_code varchar(10),\n" +
+            "FOREIGN KEY (fk_student_id) References student(student_id),\n" +
+            "FOREIGN KEY (fk_course_code) References course(code)\n" +
+            ");";
+    stmt.executeUpdate(createTakes);
+    String createHeldIn = "CREATE TABLE HELD_IN(\n" +
+            "start_at TIME NOT NULL,\n" +
+            "end_at TIME NOT NULL,\n" +
+            "fk_course_code varchar(10),\n" +
+            "fk_class_id varchar(12),\n" +
+            "dayofweek varchar(9),\n" +
+            "section integer NOT NULL,\n" +
+            "FOREIGN KEY (fk_course_code) References course(code),\n" +
+            "FOREIGN KEY (fk_class_id) References classroom(class_id)\n" +
+            ");";
+    stmt.executeUpdate(createHeldIn);
+    String createOffers = "CREATE TABLE OFFERS(\n" +
+            "fk_staff_id integer,\n" +
+            "fk_course_code varchar(10),\n" +
+            "FOREIGN KEY (fk_course_code) References course(code),\n" +
+            "FOREIGN KEY (fk_staff_id) References academic_staff(as_id)\n" +
+            ");";
+    stmt.execute(createOffers);
+    String alterGpa = "ALTER TABLE student ADD COLUMN gpa float DEFAULT (3.5);";
+    stmt.execute(alterGpa);
+    String createPre = "CREATE TABLE prerequisite(\n" +
+            "\tcode varchar(10),\n" +
+            "    pre_code varchar(10)\n" +
+            ");";
+    stmt.execute(createPre);
+    stmt.close();
   }
 
   public Connection getConnect(){

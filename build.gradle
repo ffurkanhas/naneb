@@ -17,10 +17,18 @@ dependencies {
     compile 'org.postgresql:postgresql:9.3-1101-jdbc41'
     //neo4j
     compile 'org.neo4j.driver:neo4j-java-driver:1.2.1'
+    // https://mvnrepository.com/artifact/org.neo4j/neo4j-jdbc-driver
+    //compile group: 'org.neo4j', name: 'neo4j-jdbc-driver', version: '3.1.0'
     //zt-exec for ProcessExecutor
     compile 'org.zeroturnaround:zt-exec:1.10'
-    // https://mvnrepository.com/artifact/jgoodies/forms
-    compile group: 'jgoodies', name: 'forms', version: '1.0.5'
+    // https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api
+    compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.0.Final'
+    // https://mvnrepository.com/artifact/com.miglayout/miglayout
+    compile group: 'com.miglayout', name: 'miglayout', version: '3.5.5'
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.12.Final'
+
+
 }
 
 task nanebJar(type: Jar) {
@@ -33,3 +41,5 @@ task nanebJar(type: Jar) {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
+
+sourceSets.main.output.resourcesDir = sourceSets.main.output.classesDir
