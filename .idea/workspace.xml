@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89171d42-9ad3-4a0b-b8b5-3f16199ed9c2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_neo4j_driver_neo4j_java_driver_1_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Neo4J/Neo4JCsvImporter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Neo4J/PsqlToNeo4JHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Neo4J/PsqlToNeo4JRunner.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/htmlparse/BisParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/htmlparse/OrtamParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/htmlparse/Util/CourseBundle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/htmlparse/Util/StudentBundle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/postgre/DbInitializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/naneB-linux-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/resources/main/bis.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/nanebJar/MANIFEST.MF" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/jvmClassSignatures.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Neo4J/Neo4JCsvImporter.class" afterPath="$PROJECT_DIR$/out/production/classes/Neo4J/Neo4JCsvImporter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Neo4J/PsqlToNeo4JHelper.class" afterPath="$PROJECT_DIR$/out/production/classes/Neo4J/PsqlToNeo4JHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/htmlparse/BisParser.class" afterPath="$PROJECT_DIR$/out/production/classes/htmlparse/BisParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/postgre/DbInitializer.class" afterPath="$PROJECT_DIR$/out/production/classes/postgre/DbInitializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/etubis-project_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/etubis-project_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/etubis-project_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/etubis-project_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Neo4J/Neo4JCsvImporter.java" afterPath="$PROJECT_DIR$/src/main/java/Neo4J/Neo4JCsvImporter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Neo4J/PsqlToNeo4JHelper.java" afterPath="$PROJECT_DIR$/src/main/java/Neo4J/PsqlToNeo4JHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ServerApp/ServerApp.java" afterPath="$PROJECT_DIR$/src/main/java/ServerApp/ServerApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/htmlparse/BisParser.java" afterPath="$PROJECT_DIR$/src/main/java/htmlparse/BisParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/postgre/DbInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/postgre/DbInitializer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -95,21 +64,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Neo4JDemo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Neo4JDemo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/Neo4JDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Neo4JCsvImporter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Neo4JCsvImporter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/Neo4JCsvImporter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="122" column="5" lean-forward="false" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+            <state relative-caret-position="270">
+              <caret line="113" column="62" lean-forward="true" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -118,7 +87,7 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Gui/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-720">
+            <state relative-caret-position="-1206">
               <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
               <folding>
                 <element signature="e#1701#1702#0" expanded="true" />
@@ -489,8 +458,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Gui/GUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/Gui/OtherFunctions.java" />
         <option value="$PROJECT_DIR$/src/main/java/postgre/DbInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Neo4J/Neo4JCsvImporter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Neo4J/Neo4JDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Neo4J/Neo4JCsvImporter.java" />
       </list>
     </option>
   </component>
@@ -867,7 +836,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511166985242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Neo4J Install bug fix">
+      <created>1511242794212</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1511242794212</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1189,17 +1165,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/Neo4JCsvImporter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/Neo4JDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="122" column="5" lean-forward="false" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Gui/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
+        <state relative-caret-position="-1206">
           <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding>
             <element signature="e#1701#1702#0" expanded="true" />
@@ -1208,10 +1184,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/Neo4JDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/Neo4JCsvImporter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="57" lean-forward="false" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        <state relative-caret-position="270">
+          <caret line="113" column="62" lean-forward="true" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
           <folding />
         </state>
       </provider>

@@ -113,7 +113,7 @@ public class Neo4JCsvImporter {
                 "WHERE benan.dept = furkan.dept\n" +
                 "MERGE (benan)-[r:BolumIliskisi]-(furkan)\n" +
                 "WITH r as rel\n" +
-                "SET rel.len = round(10.0^2 * 0.6 * 1)/10.0^2");
+                "SET rel.len = round(10.0^2 * 1)/10.0^2");
         session.run("LOAD CSV WITH HEADERS FROM \"file:///prerequisite.csv\" AS csvPre\n" +
                 "MATCH (c1:Course),(c2:Course)\n" +
                 "WHERE c1.code = csvPre.course_code and c2.code = csvPre.pre_code\n" +
