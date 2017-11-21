@@ -1,0 +1,1 @@
+Server kurulumu için https://github.com/ffurkanhas/naneb/tree/master/build/libs adresinden naneB-linux-1.0.jar uygulamasını inidirip sudo yetkisi ile çalıştırmak yeterlidir. İzlenmesi gereken adımları uygulamada mevcut.
