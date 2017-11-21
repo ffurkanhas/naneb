@@ -42,7 +42,7 @@ public class SettingsGui extends JFrame {
         setDefaultButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                neo4JUrlField.setText("jdbc:neo4j:bolt://localhost");
+                neo4JUrlField.setText("bolt://localhost");
             }
         });
         clearButton.addActionListener(new ActionListener() {

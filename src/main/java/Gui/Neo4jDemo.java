@@ -3,7 +3,7 @@ package Gui;
 import org.neo4j.driver.v1.*;
 
 public class Neo4jDemo {
-    static String neo4JUrl = "jdbc:neo4j:bolt://localhost:7687";
+    static String neo4JUrl = "bolt://localhost";
     static String neo4JUserName = "neo4j";
     static String neo4JPassword = "123456";
     static Driver driver;

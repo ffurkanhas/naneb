@@ -12,12 +12,12 @@ import java.util.concurrent.TimeoutException;
 
 public class Neo4JCsvImporter {
 
-    private String neo4JUrl = "jdbc:neo4j:bolt://localhost";
+    private String neo4JUrl = "bolt://localhost";
     private String neo4JUserName = "neo4j";
     private String neo4JPassword = "123456";
     private String csvPaths = "/tmp/";
     private String neo4JImportPath = "/var/lib/neo4j/import";
-    private Driver driver;
+    private static Driver driver;
 
     public void copyCsvToNeo4J(ArrayList<String> tableNames){
         ProcessExecutor pe = new ProcessExecutor();
