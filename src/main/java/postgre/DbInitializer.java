@@ -208,7 +208,7 @@ public class DbInitializer {
     for(StudentBundle s : sb)
     {
       Random r = new Random();
-      double randomValue = 1 + (5 - 1) * r.nextDouble();
+      double randomValue = 1 + (4 - 1) * r.nextDouble();
       String[] nTokens = s.getNameSeperate();
       String squery = "INSERT INTO student VALUES(" +
                       "'" + nTokens[0] + "'," +
