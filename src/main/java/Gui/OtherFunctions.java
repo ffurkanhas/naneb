@@ -1,5 +1,8 @@
 package Gui;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -256,5 +259,58 @@ public class OtherFunctions {
 		System.out.println(q);
 
 		return execute(q);
+	}
+
+	public static String getStudentName(String studentNo){
+		String getNameQuery = "Select f.first_name,f.m_init,f.last_name From Student as f where f.student_id = " + studentNo + " ;";
+		Connection c = null;
+		Statement stmt = null;
+		String result="";
+		try{
+			String url = OtherFunctions.emf.getProperties().get("javax.persistence.jdbc.url").toString();
+			String password = OtherFunctions.emf.getProperties().get("javax.persistence.jdbc.password").toString();
+
+			Class.forName("org.postgresql.Driver");
+			c = DriverManager
+					.getConnection(url.trim(),
+							userName, password);
+			stmt = c.createStatement();
+			System.out.println("Opened database successfully");
+
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try{
+			ResultSet rs = stmt.executeQuery(getNameQuery);
+			ResultSetMetaData rsmd = rs.getMetaData();
+			int columnsNumber = rsmd.getColumnCount();
+			while (rs.next()) {
+				for (int i = 1; i <= columnsNumber; i++) {
+					String columnValue = rs.getString(i);
+					result +=columnValue + " ";
+				}
+			}
+			return result;
+		}catch(SQLException e){
+			System.out.println("Gecersiz query.");
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public static void writeToFile(String s)
+	{
+		try
+		{
+			PrintWriter pw = new PrintWriter(new File("neo4jquery.txt"));
+			pw.println(s);
+			pw.close();
+		}
+		catch(IOException ioe)
+		{
+			//do nothing
+		}
 	}
 }

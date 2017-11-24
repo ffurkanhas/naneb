@@ -186,7 +186,7 @@ public class GUI {
 		});
 		frame.getContentPane().add(addStaff, "cell 11 11,alignx left,aligny top");
 
-		JLabel label_29 = new JLabel("Giriþ Yýlý: (Ýki Haneli: 17 gibi)");
+		JLabel label_29 = new JLabel("Giris Yili: (Iki Haneli: 17 gibi)");
 		frame.getContentPane().add(label_29, "cell 1 12");
 
 		deptCombo = new JComboBox<String>();
@@ -231,7 +231,7 @@ public class GUI {
 				lname.setText("");
 				txtYear.setText("");
 				Selected.setText("Ogrenci Bilgisi:\nAd:" + "\nIkinci Ad:"
-						+"\nSoyad: " + "\nGiris Yýlý:"
+						+"\nSoyad: " + "\nGiris Yili:"
 						+"\nDersler: " + "\nKulupler: "
 						+ "\nHocalar: " + "\nBolum: ");
 			}
@@ -310,7 +310,7 @@ public class GUI {
 		bolumKatsayisi = new JTextField(); //bolum
 		frame.getContentPane().add(bolumKatsayisi, "cell 10 19,growx");
 		bolumKatsayisi.setColumns(10);
-
+		bolumKatsayisi.setText("0.6");
 		comboBox_2 = new JComboBox<String>();
 
 
@@ -320,6 +320,7 @@ public class GUI {
 		frame.getContentPane().add(lblDersKatsayisi, "cell 7 20");
 
 		dersKatsayisi = new JTextField(); //ders
+		dersKatsayisi.setText("0.6");
 		frame.getContentPane().add(dersKatsayisi, "cell 10 20,growx");
 		dersKatsayisi.setColumns(10);
 
@@ -327,6 +328,7 @@ public class GUI {
 		frame.getContentPane().add(lblToplulukKatsayisi, "cell 7 21");
 
 		toplulukKatsayisi = new JTextField(); //topluluk
+		toplulukKatsayisi.setText("0.5");
 		frame.getContentPane().add(toplulukKatsayisi, "cell 10 21,growx");
 		toplulukKatsayisi.setColumns(10);
 
@@ -334,6 +336,7 @@ public class GUI {
 		frame.getContentPane().add(lblubeKatsayisi, "cell 7 22");
 
 		subeKatsayisi = new JTextField(); //sube
+		subeKatsayisi.setText("0.8");
 		frame.getContentPane().add(subeKatsayisi, "cell 10 22,growx");
 		subeKatsayisi.setColumns(10);
 
@@ -351,6 +354,14 @@ public class GUI {
 				double gpa_max = 0;
 				int sum =0;
 				HashMap<Double, String> secenek = new HashMap<>();
+				String neo4jQuery="MATCH (s:Student{student_id:\"" + comboBox_1.getSelectedItem().toString().trim() + "\"}),";
+				/*for (int i=0;i<students.length;i++){
+					neo4jQuery+= "(s"+i+":Student{student_id:\"" + students[i].trim() + "\"}),";
+					neo4jQuery+= "p" +i +"=(s)-[r"+i+":DersIliskisi]-(s"+i+"),\n";
+				}*/
+
+				int ccount = 0;
+
 				for(int i=0;i<students.length;i++) {
 					String ilkNo = (String)comboBox_1.getSelectedItem();
 					String sonNo = students[i];
@@ -375,7 +386,19 @@ public class GUI {
 					double ogrenci2Gpa = n.ogrenciGpa(sonNo);
 					double toplam = d+d1+d2+d3;
 					sum+=toplam;
-					if(!textField.getText().equals("")  && toplam<Integer.parseInt(textField.getText())) continue;
+
+					if(toplam>0){
+						ccount++;
+						neo4jQuery+= "(s"+i+":Student{student_id:\"" + students[i].trim() + "\"}),";
+						if(d1>0)
+							neo4jQuery+= "p" +i +"=(s)-[r"+i+":DersIliskisi]-(s"+i+"),\n";
+						else if(d>0)
+							neo4jQuery+= "p" +i +"=(s)-[r"+i+":BolumIliskisi]-(s"+i+"),\n";
+						else if(d2>0)
+							neo4jQuery+= "p" +i +"=(s)-[r"+i+":ToplulukIliskisi]-(s"+i+"),\n";
+					}
+
+					if(!textField.getText().equals("")  && toplam<Double.parseDouble(textField.getText())) continue;
 
 					if(secenek.containsKey(toplam))
 					{
@@ -386,16 +409,26 @@ public class GUI {
 						Double gpaOld = Double.parseDouble(realVal.split(" ")[1]);
 						String newVal = val;
 						if(ogrenci2Gpa>gpaOld)
-							newVal = sonNo + " " + ogrenci2Gpa + "-" + val;
+							newVal = sonNo + " " + ogrenci2Gpa + " " + OtherFunctions.getStudentName(sonNo) + "-" + val;
 						else
-							newVal = val + "-" + sonNo + " " + ogrenci2Gpa;
+							newVal = val + "-" + sonNo + " " + ogrenci2Gpa + " " + OtherFunctions.getStudentName(sonNo);
 						secenek.put(toplam, newVal);
 					}
 					else
 					{
-						secenek.put(toplam, sonNo + " " + ogrenci2Gpa);
+						secenek.put(toplam, sonNo + " " + ogrenci2Gpa + " " + OtherFunctions.getStudentName(sonNo));
 					}
 				}
+
+				neo4jQuery = neo4jQuery.substring(0,neo4jQuery.length()-2)+ "\nRETURN s,";
+				for(int i=0;i<ccount;i++){
+					neo4jQuery += "s" +i +",";
+				}
+
+				neo4jQuery=neo4jQuery.substring(0,neo4jQuery.length()-1);
+				System.out.println(neo4jQuery);
+				OtherFunctions.writeToFile(neo4jQuery);
+
 
 				System.out.println("BENIM YERIM");
 				for(Double doble : secenek.keySet())
@@ -424,7 +457,8 @@ public class GUI {
 
 				textArea.setText("Puan Numara GPA\n"
 						+ "_ _ _ _ _ _ _ _ _ _ _\n"+
-						"En iyi secenek:\n"+outs[0]+"\nDiger secenekler:\n"+outs[1]+"\n"+outs[2]+"\nThreshold Onerisi: " + (sum/(double)students.length));
+						"En iyi secenek:\n"+outs[0]+"\nDiger secenekler:\n"+outs[1]+"\n"+outs[2]+"\nThreshold Onerisi: " + (sum/(double)students.length)
+				+"\n Neo4j sorgusu neo4jquery.txt dosyasina kaydedilmistir.");
 				n.closeDriver();
 
 			}
@@ -508,7 +542,7 @@ public class GUI {
 		}
 		staff += "]";
 		String select = "Ogrenci Bilgisi:\nAd:" + fname.getText() + "\nIkinci Ad:" + minit.getText()
-				+"\nSoyad: " + lname.getText() + "\nGiris Yýlý:" + txtYear.getText()
+				+"\nSoyad: " + lname.getText() + "\nGiris Yili:" + txtYear.getText()
 				+"\nDersler: " + courseSelected.toString() + "\nKulupler: "
 				+ studentClubSelected.toString() + "\nHocalar: " + staff + "\nBolum: "
 				+ deptsSelected.toString();

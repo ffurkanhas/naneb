@@ -2,10 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89171d42-9ad3-4a0b-b8b5-3f16199ed9c2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Gui/Neo4jDemo.class" afterPath="$PROJECT_DIR$/build/classes/main/Gui/Neo4jDemo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/naneB-linux-server-1.0.jar" afterPath="$PROJECT_DIR$/build/libs/naneB-linux-server-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Gui/GUI$4.class" afterPath="$PROJECT_DIR$/build/classes/main/Gui/GUI$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Gui/GUI$6.class" afterPath="$PROJECT_DIR$/build/classes/main/Gui/GUI$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Gui/GUI$7.class" afterPath="$PROJECT_DIR$/build/classes/main/Gui/GUI$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Gui/GUI.class" afterPath="$PROJECT_DIR$/build/classes/main/Gui/GUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Gui/OtherFunctions.class" afterPath="$PROJECT_DIR$/build/classes/main/Gui/OtherFunctions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/naneB-client-1.0.jar" afterPath="$PROJECT_DIR$/build/libs/naneB-client-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Gui/GUI$4.class" afterPath="$PROJECT_DIR$/out/production/classes/Gui/GUI$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Gui/GUI$6.class" afterPath="$PROJECT_DIR$/out/production/classes/Gui/GUI$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Gui/GUI$7.class" afterPath="$PROJECT_DIR$/out/production/classes/Gui/GUI$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Gui/GUI.class" afterPath="$PROJECT_DIR$/out/production/classes/Gui/GUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Gui/Neo4jDemo.class" afterPath="$PROJECT_DIR$/out/production/classes/Gui/Neo4jDemo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Gui/OtherFunctions.class" afterPath="$PROJECT_DIR$/out/production/classes/Gui/OtherFunctions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Gui/SettingsGui$2.class" afterPath="$PROJECT_DIR$/out/production/classes/Gui/SettingsGui$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Neo4J/Neo4JCsvImporter.class" afterPath="$PROJECT_DIR$/out/production/classes/Neo4J/Neo4JCsvImporter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/Neo4J/Neo4JDemo.class" afterPath="$PROJECT_DIR$/out/production/classes/Neo4J/Neo4JDemo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/ServerApp/ServerApp.class" afterPath="$PROJECT_DIR$/out/production/classes/ServerApp/ServerApp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/postgre/DbInitializer.class" afterPath="$PROJECT_DIR$/out/production/classes/postgre/DbInitializer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/postgre/DbInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/postgre/DbInitializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Gui/GUI.java" afterPath="$PROJECT_DIR$/src/main/java/Gui/GUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Gui/OtherFunctions.java" afterPath="$PROJECT_DIR$/src/main/java/Gui/OtherFunctions.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -64,36 +85,16 @@
       </state>
     </system>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="etubis-project" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Gui/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8436">
-              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-              <folding>
-                <element signature="e#744#752#0" expanded="true" />
-                <element signature="e#852#860#0" expanded="true" />
-                <element signature="e#959#968#0" expanded="true" />
-                <element signature="e#1065#1073#0" expanded="true" />
-                <element signature="e#1201#1218#0" expanded="true" />
-                <element signature="e#1267#1275#0" expanded="true" />
-                <element signature="e#2668#2676#0" expanded="true" />
-                <element signature="e#2747#2755#0" expanded="true" />
-                <element signature="e#2825#2833#0" expanded="true" />
-                <element signature="e#2903#2911#0" expanded="true" />
-                <element signature="e#9723#9731#0" expanded="true" />
-                <element signature="e#9787#9795#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Neo4JCsvImporter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/Neo4JCsvImporter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-468">
-              <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="162">
+              <caret line="319" column="8" lean-forward="false" selection-start-line="319" selection-start-column="8" selection-end-line="319" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,28 +102,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbInitializer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/postgre/DbInitializer.java">
+      <file leaf-file-name="OtherFunctions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Gui/OtherFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1184">
-              <caret line="216" column="48" lean-forward="true" selection-start-line="216" selection-start-column="48" selection-end-line="216" selection-end-column="48" />
+            <state relative-caret-position="237">
+              <caret line="306" column="66" lean-forward="false" selection-start-line="306" selection-start-column="66" selection-end-line="306" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingsGui.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Gui/SettingsGui.java">
+      <file leaf-file-name="AcademicStaff.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Gui/AcademicStaff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="44" column="58" lean-forward="false" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1462#1463#0" expanded="true" />
-                <element signature="e#1535#1536#0" expanded="true" />
-                <element signature="e#3457#3473#0" expanded="true" />
-                <element signature="initializer##0;class#SettingsGui#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="162">
+              <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,38 +125,8 @@
       <file leaf-file-name="Neo4jDemo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Gui/Neo4jDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-504">
-              <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ServerApp/ServerApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PsqlToNeo4JHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/PsqlToNeo4JHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="118">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -185,6 +150,9 @@
       <find>read</find>
       <find>lol</find>
       <find>Ý</find>
+      <find>comboBox_1</find>
+      <find>studentstak</find>
+      <find>ilkN</find>
     </findStrings>
     <replaceStrings>
       <replace>İ</replace>
@@ -518,16 +486,16 @@
         <option value="$PROJECT_DIR$/src/main/java/GUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/StudentClub.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Gui/OtherFunctions.java" />
         <option value="$PROJECT_DIR$/src/main/java/Gui/SettingsGui.form" />
-        <option value="$PROJECT_DIR$/src/main/java/Gui/GUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/Neo4J/Neo4JDemo.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/ServerApp/ServerApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/Gui/SettingsGui.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Gui/Neo4jDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/Neo4J/Neo4JCsvImporter.java" />
         <option value="$PROJECT_DIR$/src/main/java/postgre/DbInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Gui/Neo4jDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Gui/OtherFunctions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Gui/GUI.java" />
       </list>
     </option>
   </component>
@@ -561,9 +529,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -652,6 +617,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -694,7 +662,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.etubis-project [nanebServerJar]">
+  <component name="RunManager" selected="Gradle.etubis-project [nanebClientJar]">
     <configuration name="GUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="GUI" />
@@ -883,8 +851,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.etubis-project [nanebServerJar]" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GUI" />
+        <item index="0" class="java.lang.String" itemvalue="Application.GUI" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.etubis-project [nanebServerJar]" />
         <item index="2" class="java.lang.String" itemvalue="Gradle.etubis-project [nanebClientJar]" />
         <item index="3" class="java.lang.String" itemvalue="Application.SettingsGui" />
         <item index="4" class="java.lang.String" itemvalue="Application.GUI (1)" />
@@ -961,7 +929,21 @@
       <option name="project" value="LOCAL" />
       <updated>1511292397597</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Random GPA fix">
+      <created>1511293062353</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1511293062353</updated>
+    </task>
+    <task id="LOCAL-00010" summary="last version of jar files are updated">
+      <created>1511293134209</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1511293134209</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -987,13 +969,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30438247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30996016" sideWeight="0.49159664" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39968896" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30996016" sideWeight="0.50840336" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1036,7 +1018,9 @@
     <MESSAGE value="Neo4J Install bug fix" />
     <MESSAGE value="Neo4J bug fix" />
     <MESSAGE value="Last version of project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last version of project" />
+    <MESSAGE value="Random GPA fix" />
+    <MESSAGE value="last version of jar files are updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="last version of jar files are updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1131,7 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,7 +1122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,7 +1129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,24 +1169,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Gui/AcademicStaff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/htmlparse/Util/CourseBundle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="e#393#394#0" expanded="false" />
-            <element signature="e#441#442#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,50 +1189,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/postgre/DbInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="166" column="36" lean-forward="false" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Gui/SettingsGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="44" column="58" lean-forward="false" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1462#1463#0" expanded="false" />
+            <element signature="e#1535#1536#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="188">
           <caret line="45" column="12" lean-forward="false" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Gui/OtherFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="195" column="12" lean-forward="true" selection-start-line="195" selection-start-column="12" selection-end-line="195" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/PsqlToNeo4JHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Gui/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8436">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding>
-            <element signature="e#744#752#0" expanded="true" />
-            <element signature="e#852#860#0" expanded="true" />
-            <element signature="e#959#968#0" expanded="true" />
-            <element signature="e#1065#1073#0" expanded="true" />
-            <element signature="e#1201#1218#0" expanded="true" />
-            <element signature="e#1267#1275#0" expanded="true" />
-            <element signature="e#2668#2676#0" expanded="true" />
-            <element signature="e#2747#2755#0" expanded="true" />
-            <element signature="e#2825#2833#0" expanded="true" />
-            <element signature="e#2903#2911#0" expanded="true" />
-            <element signature="e#9723#9731#0" expanded="true" />
-            <element signature="e#9787#9795#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1277,43 +1225,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Gui/SettingsGui.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/PsqlToNeo4JHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="44" column="58" lean-forward="false" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1462#1463#0" expanded="true" />
-            <element signature="e#1535#1536#0" expanded="true" />
-            <element signature="e#3457#3473#0" expanded="true" />
-            <element signature="initializer##0;class#SettingsGui#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Gui/Neo4jDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="215">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Neo4J/Neo4JCsvImporter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
+        <state relative-caret-position="18">
           <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/postgre/DbInitializer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Gui/Neo4jDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1184">
-          <caret line="216" column="48" lean-forward="true" selection-start-line="216" selection-start-column="48" selection-end-line="216" selection-end-column="48" />
+        <state relative-caret-position="118">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Gui/AcademicStaff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Gui/OtherFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="306" column="66" lean-forward="false" selection-start-line="306" selection-start-column="66" selection-end-line="306" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Gui/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="319" column="8" lean-forward="false" selection-start-line="319" selection-start-column="8" selection-end-line="319" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
