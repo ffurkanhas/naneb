@@ -52,7 +52,7 @@ task nanebClientJar(type: Jar) {
                 'Implementation-Version': version,
                 'Main-Class': 'Gui/GUI'
     }
-    baseName = 'naneB' + '-client'
+    baseName = 'naneB' + '-linux-client'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }

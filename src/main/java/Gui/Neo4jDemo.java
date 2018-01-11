@@ -85,11 +85,4 @@ public class Neo4jDemo {
         return (record==null) ? 0 : record.get(0).get("gpa").asDouble();
     }
 
-/*
-MATCH p=shortestPath(
-  (s1:Student {student_id:"141301028"})-[*]-(s2:Student {student_id:"141101024"})
-)
-RETURN p
- */
-
 }

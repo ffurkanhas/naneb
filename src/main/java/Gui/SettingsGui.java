@@ -3,6 +3,7 @@ package Gui;
 import com.intellij.uiDesigner.core.Spacer;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
+import database.OtherFunctions;
 import org.neo4j.driver.v1.*;
 import org.neo4j.driver.v1.Driver;
 

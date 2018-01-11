@@ -6,6 +6,8 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+
+import database.OtherFunctions;
 import net.miginfocom.swing.MigLayout;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
