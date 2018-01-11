@@ -5,8 +5,4 @@ Izlenmesi gereken adimlar uygulamada mevcut\
 
 Client kurulumu icin:\
 1-) gradle nanebClientJar\
-2-) java -jar build/libs/naneB-linux-client-1.0.jar\
-
-
-
-
+2-) java -jar build/libs/naneB-linux-client-1.0.jar

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89171d42-9ad3-4a0b-b8b5-3f16199ed9c2" name="Default" comment="bis.html moved to thirdparty">
+    <list default="true" id="89171d42-9ad3-4a0b-b8b5-3f16199ed9c2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
@@ -101,8 +101,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="162">
-                <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <first_editor relative-caret-position="108">
+                <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -884,7 +884,7 @@
       <option name="presentableId" value="Default" />
       <updated>1509652023163</updated>
       <workItem from="1515666678972" duration="2825000" />
-      <workItem from="1515679570860" duration="658000" />
+      <workItem from="1515679570860" duration="687000" />
     </task>
     <task id="LOCAL-00001" summary="Some bug fixes and Neo4J queries are added">
       <created>1511166617254</created>
@@ -977,11 +977,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515668184685</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="README.md update">
+      <created>1515680246667</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1515680246667</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3483000" />
+    <option name="totallyTimeSpent" value="3512000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1045,7 +1052,8 @@
     <MESSAGE value="last version of jar files are updated -Ataberk" />
     <MESSAGE value=".gitignore is added&#10;Some files are moved" />
     <MESSAGE value="bis.html moved to thirdparty" />
-    <option name="LAST_COMMIT_MESSAGE" value="bis.html moved to thirdparty" />
+    <MESSAGE value="README.md update" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1324,8 +1332,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="162">
-            <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <first_editor relative-caret-position="108">
+            <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
             <folding />
           </first_editor>
           <second_editor />
