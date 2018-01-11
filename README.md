@@ -1,1 +1,12 @@
-Server kurulumu için https://github.com/ffurkanhas/naneb/tree/master/build/libs adresinden naneB-linux-1.0.jar uygulamasını inidirip sudo yetkisi ile çalıştırmak yeterlidir. İzlenmesi gereken adımları uygulamada mevcut.
+Server kurulumu icin:\
+1-) gradle nanebServerJar\
+2-) sudo java -jar build/libs/naneB-linux-server-1.0.jar\
+Izlenmesi gereken adimlar uygulamada mevcut\
+
+Client kurulumu icin:\
+1-) gradle nanebClientJar\
+2-) java -jar build/libs/naneB-linux-client-1.0.jar\
+
+
+
+
