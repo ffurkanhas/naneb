@@ -150,7 +150,7 @@ public class ServerApp {
 
     public void runBisParser(){
         BisParser bp = new BisParser();
-        String[] args = {"0","/bis.html"};
+        String[] args = {"0","/thirdparty/bis.html"};
         try {
             bp.bisParserRunner(args,postgresUserName,postgresPassword);
         } catch (IOException e) {
